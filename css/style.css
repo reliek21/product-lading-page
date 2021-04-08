@@ -1,0 +1,267 @@
+/* Custom Vars */
+
+:root {
+    /* Colors */
+    --background: #eeeeee;
+    --btn-color: #f1c40f;
+    --icon-color: #fb8c00;
+    /* Font */
+    --font: "Lato", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    background-color: var(--background);
+    font-family: var(--font);
+    color: black;
+    font-size: 16px;
+}
+
+.container {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    top: 0;
+    position: fixed;
+    z-index: 2;
+    background-color: var(--background);
+}
+
+.header .header-image {
+    width: 20%;
+    margin-left: 2.5rem;
+}
+
+.header .nav-bar {
+    width: 30%;
+    margin-right: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.header .nav-bar ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    list-style: none;
+}
+
+.header .nav-bar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Form */
+
+.section-email {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.section-email h3 {
+    font-size: 24px;
+}
+
+.section-email .form {
+    margin: 15px auto;
+    width: 28%;
+}
+
+.section-email .form .email {
+    border: 1px solid black;
+    width: 100%;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 2px;
+    margin-bottom: 15px;
+}
+
+.section-email .form input[type="submit"] {
+    background-color: var(--btn-color);
+    border: none;
+    border-radius: 2px;
+    font-size: 16px;
+    padding: 5px 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.features {
+    margin: 5rem 0;
+}
+
+.features .box-feature {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+}
+
+.features .box-feature .icon {
+    width: 7%;
+}
+
+.features .box-feature i {
+    font-size: 40px;
+    color: var(--icon-color);
+}
+
+.features .box-feature .box-text {
+    margin-left: 2rem;
+    width: 83%;
+}
+
+.features .box-feature .box-text h4 {
+    font-size: 24px;
+}
+
+iframe {
+    display: block;
+    margin: 3rem auto;
+}
+
+.pricing {
+    width: 100%;
+    text-align: center;
+    margin: 4rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pricing .box-price {
+    border: 1px solid black;
+    width: 300px;
+    height: 300px;
+}
+
+.box-price .title {
+    background-color: #dddddd;
+    padding: 10px 0;
+}
+
+.box-price .title h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.box-price .text .price {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 1rem 0 !important;
+}
+
+.box-price .text p {
+    margin-bottom: 10px;
+}
+
+.box-price .btn-price {
+    padding: 10px 30px;
+    background-color: var(--btn-color);
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    margin-top: 15px;
+    display: inline-block;
+    border-radius: 2px;
+    transition: background-color 0.3s ease-out;
+}
+
+.box-price .btn-price:hover {
+    background-color: var(--icon-color);
+}
+
+footer {
+    background-color: #dddddd;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 3rem;
+}
+
+footer .info {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+footer .info a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+}
+
+footer .copyright {
+    font-size: 15px;
+    font-weight: 400;
+    color: gray;
+}
+
+@media (max-width: 730px) {
+    .header {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .header .header-image {
+        width: 50%;
+        margin: 1rem auto;
+    }
+
+    .header .nav-bar {
+        width: 100%;
+    }
+
+    .section-email {
+        margin-top: 7rem;
+    }
+
+    .section-email .form {
+        width: 90%;
+    }
+
+    iframe {
+        width: 80%;
+    }
+
+    .pricing {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        align-items: center;
+    }
+}
